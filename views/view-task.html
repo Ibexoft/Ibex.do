@@ -20,10 +20,15 @@
                         <td>Lorem</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                         <td>
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-calendar"></i>
-                            <i class="bi bi-chat-left-text"></i>
-                            <i class="bi bi-three-dots"></i>
+                            <div>
+                                <button type="button" class="btn edit-btn edit-task" data-bs-toggle="modal"
+                                    data-bs-target="#editModal">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-calendar"></i></button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-chat-left-text"></i></button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-three-dots"></i></button>
+                            </div>
                         </td>
                     </tr>
 
@@ -32,10 +37,15 @@
                         <td>Lorem</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                         <td>
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-calendar"></i>
-                            <i class="bi bi-chat-left-text"></i>
-                            <i class="bi bi-three-dots"></i>
+                            <div>
+                                <button type="button" class="btn edit-btn edit-task" data-bs-toggle="modal"
+                                    data-bs-target="#editModal">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-calendar"></i></button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-chat-left-text"></i></button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-three-dots"></i></button>
+                            </div>
                         </td>
                     </tr>
 
@@ -44,15 +54,58 @@
                         <td>Lorem</td>
                         <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                         <td>
-                            <i class="bi bi-pencil-square"></i>
-                            <i class="bi bi-calendar"></i>
-                            <i class="bi bi-chat-left-text"></i>
-                            <i class="bi bi-three-dots"></i>
+                            <div>
+                                <button type="button" class="btn edit-btn edit-task" data-bs-toggle="modal"
+                                    data-bs-target="#editModal">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-calendar"></i></button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-chat-left-text"></i></button>
+                                <button type="button" class="btn edit-btn"><i class="bi bi-three-dots"></i></button>
+                            </div>
                         </td>
                     </tr>
 
                 </tbody>
             </table>
+        </div>
+    </div>
+</section>
+
+
+<!-- Edit Modal -->
+<section>
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="task-title" class="col-form-label">Title</label>
+                        <input id="titleEdit" type="text" class="form-control" id="task-title" name="titleEdit">
+                    </div>
+                    <div class="mb-3">
+                        <label for="task-desc" class="col-form-label">Description</label>
+                        <textarea id="descriptionEdit" class="form-control" id="task-desc"
+                            name="descriptionEdit"></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        Save changes
+                    </button>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>
