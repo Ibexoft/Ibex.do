@@ -1,8 +1,8 @@
-//test function for getting data.
+// test function for getting data.
 // function getFormData() {
-//     let title = document.getElementById("title").innerHTML;
-//     let description = document.getElementById("description").innerHTML;
-
+//     let title = document.getElementsByClassName("title").innerHTML;
+//     let description = document.getElementsByClassName("description").innerHTML;
+    
 //     titleEdit.value = title;
 //     descriptionEdit.value = description;
 // }
@@ -10,15 +10,24 @@
 
 
 // Getting data from task and setting into modal.
-edits = document.getElementsByClassName('edit-task');
+let edits = document.getElementsByClassName('edit-task');
 Array.from(edits).forEach((element) => {
     element.addEventListener("click", (e) => {
         tr = e.target.parentNode.parentNode.parentNode.parentNode;
 
-        title = tr.getElementsByTagName("td")[0].innerText;
-        description = tr.getElementsByTagName("td")[1].innerText;
+        title = tr.getElementsByTagName("td")[2].innerText;
+        description = tr.getElementsByTagName("td")[3].innerText;
 
         titleEdit.value = title;
         descriptionEdit.value = description;
     })
 })
+
+
+
+function completeTask(id) {
+    let completeTask = document.getElementById(id);
+    completeTask.remove();
+
+}
+
