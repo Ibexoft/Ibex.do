@@ -182,6 +182,7 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
+                                    <th scope="col"></th>
                                     <th scope="col">#</th>
                                     <th scope="col">Title</th>
                                     <th scope="col">Description</th>
@@ -189,8 +190,20 @@
                                 </tr>
                             </thead>
                             <tbody class="table-group-divider">
-                                <tr>
-                                    <th scope="row">1</th>
+                                <tr id="1">
+                                    <!-- <th scope="row">1</th> -->
+                                    <td>
+                                        <button class="btn edit-btn" onclick="completeTask(1)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
+                                                <path
+                                                    d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>1</td>
                                     <td>Lorem</td>
                                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                                     <td>
@@ -209,9 +222,20 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Lorem</td>
+                                <tr id="2">
+                                    <td>
+                                        <button class="btn edit-btn complete-task" onclick="completeTask(2)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
+                                                <path
+                                                    d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>2</td>
+                                    <td>Loremrrer</td>
                                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                                     <td>
                                         <div>
@@ -229,9 +253,20 @@
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Lorem</td>
+                                <tr id="3">
+                                    <td>
+                                        <button class="btn edit-btn complete-task" onclick="completeTask(3)">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
+                                                <path
+                                                    d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                                            </svg>
+                                        </button>
+                                    </td>
+                                    <td>3</td>
+                                    <td>Loremvccf</td>
                                     <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
                                     <td>
                                         <div>
@@ -349,7 +384,8 @@
                         <p>Are you sure you want to delete this task?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-light" data-bs-dismiss="modal" aria-label="Close">Cancel</button>
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal"
+                            aria-label="Close">Cancel</button>
                         <button type="button" class="btn btn-danger">Yes</button>
                     </div>
                 </div>
