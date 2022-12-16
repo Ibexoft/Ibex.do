@@ -15,8 +15,8 @@ Array.from(edits).forEach((element) => {
     element.addEventListener("click", (e) => {
         tr = e.target.parentNode.parentNode.parentNode.parentNode;
 
-        title = tr.getElementsByTagName("td")[1].innerText;
-        description = tr.getElementsByTagName("td")[2].innerText;
+        title = tr.getElementsByTagName("td")[2].innerText;
+        description = tr.getElementsByTagName("td")[3].innerText;
 
         titleEdit.value = title;
         descriptionEdit.value = description;
