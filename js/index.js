@@ -143,7 +143,7 @@ function showProjectList() {
     for (let i = 0; i < projectListArray.length; i++) {
         projects +="<li class='list-unstyled px-3'>" +
             "<div class='d-flex justify-content-center align-items-center'>" +
-            "<a href='#' class='list-group-item list-group-item-action' id='"+projectListArray[i]+"'onclick=''>"+ projectListArray[i]+"</a>" +
+            "<a href='#' class='list-group-item list-group-item-action' id='"+projectListArray[i]+"'onclick='showProject("+'id'+")'>"+ projectListArray[i]+"</a>" +
             "<div class='dropdown'>" +
             "<button class='btn dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'></button>"+
             "</div>" +
