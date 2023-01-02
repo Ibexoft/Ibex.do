@@ -100,7 +100,7 @@
                 <!-- Navigation Bar -->
                 <div class="row">
                     <div class="col-3 collapse collapse-horizontal show" id="side-bar">
-                        <nav>
+                        <div>
                             <ul class="list-group pt-4">
                                 <a href="#" class="list-group-item list-group-item-action">
                                     <li class="d-flex justify-content-between align-items-center">
@@ -118,7 +118,8 @@
                                     </li>
                                 </a>
 
-                                <a href="#" class="list-group-item list-group-item-action" onclick="showProject('today')">
+                                <a href="#" class="list-group-item list-group-item-action"
+                                    onclick="showProject('today')">
                                     <li class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <span>
@@ -137,7 +138,8 @@
                                     </li>
                                 </a>
 
-                                <a href="#" class="list-group-item list-group-item-action" onclick="showProject('upcoming')">
+                                <a href="#" class="list-group-item list-group-item-action"
+                                    onclick="showProject('upcoming')">
                                     <li class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <span>
@@ -171,9 +173,27 @@
                                     </li>
                                 </a>
                             </ul>
-                        </nav>
-                    </div>
+                        </div>
 
+                        <!-- starting of project list -->
+                        <div class="pt-4">
+                            <div class="d-flex">
+                                <button class="btn btn-light flex-grow-1 d-flex justify-content-between align-items-center" onclick="showProjectList()">Projects <span>
+                                        <svg data-bs-toggle="modal" data-bs-target="#addProjectModal" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            fill="currentColor" class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z" />
+                                        </svg>
+                                    </span></button>
+                            </div>
+
+                            <div id="projects">
+
+                            </div>
+
+                        </div>
+                        <!-- ending of project list -->
+                    </div>
 
                     <div class="col align-center px-5 py-4">
                         <h4>Today</h4>
@@ -265,8 +285,10 @@
                         </div>
 
                         <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal"
+                                aria-label="Close">Cancel</button>
                             <button type="submit" class="btn btn-primary">
-                                Add
+                                Add task
                             </button>
                         </div>
                     </div>
@@ -299,6 +321,37 @@
             </div>
         </div>
 
+        <!-- Add New Project Modal -->
+        <section>
+            <div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModal"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add Project</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="project-name" class="col-form-label">Name</label>
+                                <input id="name" type="text" class="form-control" name="project-name">
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal"
+                                aria-label="Close">Cancel</button>
+                            <button type="submit" class="btn btn-primary">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Custom Js -->
@@ -312,3 +365,37 @@
 </body>
 
 </html>
+
+<!-- <div class="d-flex list-group-item">
+    <a href="#" class="list-group-item-action">
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
+                <circle cx="8" cy="8" r="8" />
+            </svg>
+        </div>
+        <div class="ps-2">
+            Project 03
+        </div>
+
+    </a>
+    <div class="ms-auto">
+        <button type="button" class="btn btn-light dropdown-toggle"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                    <path
+                        d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                </svg></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
+</div> -->
