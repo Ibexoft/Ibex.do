@@ -25,12 +25,20 @@ let upcoming = [{
     title: "Lorem3",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 }]
+
+
+
 let projectList = {
     "today": today,
-    "upcoming": upcoming
+    "upcoming": upcoming,
+    "project1": project1,
+    "project2": project2,
+    "project3": project3
 }
 
-let currentView; 
+
+
+let currentView;
 
 
 function removeTask(id) {
@@ -82,6 +90,8 @@ function showProject(listId) {
     document.getElementById("box").innerHTML = tableData;
 
 }
+
+
 
 
 
