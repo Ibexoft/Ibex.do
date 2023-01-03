@@ -26,6 +26,47 @@ let upcoming = [{
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 }]
 
+let project1 = [{
+    id: 10,
+    title: "Lorem1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}, {
+    id: 12,
+    title: "Lorem2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}, {
+    id: 11,
+    title: "Lorem3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}]
+
+let project2 = [{
+    id: 13,
+    title: "Lorem1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}, {
+    id: 15,
+    title: "Lorem2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}, {
+    id: 14,
+    title: "Lorem3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}]
+
+let project3 = [{
+    id: 16,
+    title: "Lorem1",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}, {
+    id: 18,
+    title: "Lorem2",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}, {
+    id: 17,
+    title: "Lorem3",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+}]
 
 
 let projectList = {
@@ -36,7 +77,11 @@ let projectList = {
     "project3": project3
 }
 
-
+let projectList1 = {
+    "project1": project1,
+    "project2": project2,
+    "project3": project3
+}
 
 let currentView;
 
@@ -89,6 +134,23 @@ function showProject(listId) {
     }
     document.getElementById("box").innerHTML = tableData;
 
+}
+
+
+function showProjectList() {
+    projectListArray = Object.keys(projectList1);
+    let projects = "";
+    for (let i = 0; i < projectListArray.length; i++) {
+        projects +="<li class='list-unstyled px-3'>" +
+            "<div class='d-flex justify-content-center align-items-center'>" +
+            "<a href='#' class='list-group-item list-group-item-action' id='"+projectListArray[i]+"'onclick=''>"+ projectListArray[i]+"</a>" +
+            "<div class='dropdown'>" +
+            "<button class='btn dropdown-toggle' type='button' id='dropdownMenuButton1' data-bs-toggle='dropdown' aria-expanded='false'></button>"+
+            "</div>" +
+            "</div>" +
+            "</li>";
+    }
+    document.getElementById("projects").innerHTML = projects;
 }
 
 
